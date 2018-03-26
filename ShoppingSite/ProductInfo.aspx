@@ -25,6 +25,7 @@
         <asp:Button ID="cartt" runat="server" Text="Add to Cart" OnClick="cartt_Click" />
         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Display Shopping Cart</asp:LinkButton>
         <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Return To Main Page</asp:LinkButton>
+            <asp:Image ID="imgg" runat="server" />
         </div>
         <br />
         <br />

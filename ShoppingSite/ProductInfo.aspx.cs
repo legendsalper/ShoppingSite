@@ -18,6 +18,7 @@ public partial class ProductInfo : System.Web.UI.Page
             Vendor.Text = p1.Vendor.ToString();
             type.Text = p1.Type.ToString();
             productname.Text = (p1.Vendor.ToString() + " " + p1.Model.ToString());
+            imgg.ImageUrl = p1.ImageUrl;
 
         }
         else if (id == null)
