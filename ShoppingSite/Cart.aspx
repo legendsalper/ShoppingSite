@@ -10,6 +10,11 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Ben cart canım"></asp:Label>
+            <asp:Label ID="Vendor" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="type" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="productname" runat="server" Text="Label"></asp:Label>
+            <asp:Image ID="imgg" runat="server" />
+            <asp:Label ID="err" runat="server" Text="Label"></asp:Label>
         </div>
     </form>
 </body>

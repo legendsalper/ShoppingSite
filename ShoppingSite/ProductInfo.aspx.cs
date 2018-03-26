@@ -72,28 +72,18 @@ public partial class ProductInfo : System.Web.UI.Page
 
     protected void cartt_Click(object sender, EventArgs e)
     {
-        ArrayList SelectedProductIndices = new ArrayList();
+        ArrayList SelectedProductIndices = (ArrayList)Session["SelectedProductIndices"];
+        if (SelectedProductIndices == null)
+        {
+            SelectedProductIndices = new ArrayList();
+        }
         string id = Request.QueryString["id"];
-        if (id == "1")
+        if (SelectedProductIndices.Contains(id))
         {
-            Session["id1"] = SelectedProductIndices.Add(id);
+            ctns.Text = "Ben zaten varım";
         }
-        else if (id == "2")
-        {
-            Session["id2"] = SelectedProductIndices.Add(id);
-        }
-        else if (id == "3")
-        {
-            Session["id3"] = SelectedProductIndices.Add(id);
-        }
-        else if (id == "4")
-        {
-            Session["id4"] = SelectedProductIndices.Add(id);
-        }
-        else if (id == "5")
-        {
-            Session["id5"] = SelectedProductIndices.Add(id);
-        }
+        SelectedProductIndices.Add(id);
+        Session["SelectedProductIndices"] = SelectedProductIndices;        
     }
 
 }
